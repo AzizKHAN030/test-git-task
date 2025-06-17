@@ -11,21 +11,16 @@ module.exports = {
         edition: "community",
     },
     configuration: {
-        elasticsearch: {
-            env: {
-                ES_JAVA_OPTS: "-Xms4096m -Xmx4096m",
-            },
-        },
         php: {
             env: {
-                CONFIG__DEFAULT__CATALOG__SEARCH__ENGINE: "opensearch",
-                CONFIG__DEFAULT__CATALOG__SEARCH__OPENSEARCH_SERVER_HOSTNAME:
+                CONFIG__DEFAULT__CATALOG__SEARCH__ENGINE: "elasticsearch",
+                CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME:
                     "localhost",
-                CONFIG__DEFAULT__CATALOG__SEARCH__OPENSEARCH_SERVER_PORT:
+                CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT:
                     "9200",
-                CONFIG__DEFAULT__CATALOG__SEARCH__OPENSEARCH_INDEX_PREFIX:
+                CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_INDEX_PREFIX:
                     "magento2",
-                CONFIG__DEFAULT__CATALOG__SEARCH__OPENSEARCH_ENABLE_AUTH: "0",
+                CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_ENABLE_AUTH: "0",
             },
         },
     },
